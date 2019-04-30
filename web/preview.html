@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Titel der Seite | Name der Website</title>
+<style>
+table {
+  border: none;
+}
+td {
+  padding: 20px;
+}
+</style>
+  </head>
+  <body>
+    <div id="target"></div>
+<script>
+let i = 9;
+let html = ""
+while (i < 100) {
+  html += `
+      <tr>
+        <td><img src="./logo.svg" height="${i}"></td>
+        <td>${i} / ${Math.round(i * 19 / 4)}</td>
+      <tr>`
+  i += 1
+}
+document.getElementById('target').innerHTML = '<table>' + html + '</html>'
+</script>
+  </body>
+</html>
